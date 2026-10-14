@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="89" y1="23" x2="867" y2="580" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E8E6FF"/>
+      <stop offset="1" stop-color="#C7D7F5"/>
+    </linearGradient>
+    <linearGradient id="feature" x1="133" y1="253" x2="815" y2="518" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8D79EB"/>
+      <stop offset="1" stop-color="#4D68B6"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="600" rx="32" fill="url(#bg)"/>
+  <rect x="36" y="36" width="888" height="528" rx="22" fill="#FBFAFF"/>
+  <path d="M36 58a22 22 0 0 1 22-22h844a22 22 0 0 1 22 22v50H36V58Z" fill="#fff"/>
+  <circle cx="67" cy="67" r="7" fill="#A395EC"/><circle cx="90" cy="67" r="7" fill="#E2DFFF"/><circle cx="113" cy="67" r="7" fill="#E2DFFF"/>
+  <rect x="350" y="53" width="260" height="28" rx="14" fill="#F1F0FA"/>
+  <rect x="82" y="141" width="200" height="13" rx="6.5" fill="#31314D"/>
+  <rect x="82" y="173" width="430" height="22" rx="11" fill="#484568"/>
+  <rect x="82" y="208" width="290" height="22" rx="11" fill="#484568"/>
+  <rect x="82" y="251" width="405" height="8" rx="4" fill="#C9C7DB"/>
+  <rect x="82" y="269" width="343" height="8" rx="4" fill="#D9D7E5"/>
+  <rect x="82" y="297" width="109" height="34" rx="17" fill="#6359C9"/>
+  <rect x="655" y="139" width="208" height="112" rx="20" fill="#E9E5FF"/>
+  <circle cx="757" cy="195" r="42" fill="#8E7DE5"/>
+  <path d="M736 196c8-22 35-30 53-16 14 11 14 30 3 43h-51c-10-8-12-17-5-27Z" fill="#D9D5FF"/>
+  <path d="M756 154v-21m0 123v-20m45-41h21m-132 0h22" stroke="#8E7DE5" stroke-width="6" stroke-linecap="round"/>
+  <rect x="82" y="363" width="781" height="147" rx="18" fill="url(#feature)"/>
+  <circle cx="734" cy="433" r="68" fill="#B9B0FF" fill-opacity=".42"/>
+  <circle cx="734" cy="433" r="44" fill="#D5D0FF" fill-opacity=".62"/>
+  <circle cx="734" cy="433" r="20" fill="#F0EEFF"/>
+  <path d="M83 445c77-71 121-74 182-9 42 45 71 39 123-9 42-40 73-47 124-17 36 21 78 21 107-1" stroke="#D9D5FF" stroke-width="5" stroke-linecap="round" opacity=".72"/>
+  <rect x="119" y="396" width="148" height="8" rx="4" fill="#E8E5FF" fill-opacity=".9"/>
+  <rect x="119" y="417" width="106" height="7" rx="3.5" fill="#D2CEFF" fill-opacity=".78"/>
+  <rect x="119" y="454" width="89" height="27" rx="13.5" fill="#fff" fill-opacity=".94"/>
+</svg>

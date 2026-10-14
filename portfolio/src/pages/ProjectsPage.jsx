@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ExternalLink, FolderGit2 } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 import { GithubIcon } from '../components/Icons';
 import { projects } from '../data/portfolioData';
 
@@ -47,71 +47,74 @@ export default function ProjectsPage() {
         {filteredProjects.map((proj) => (
           <div
             key={proj.id}
-            className="flex flex-col justify-between rounded-2xl bg-slate-800/40 border border-slate-800 hover:border-slate-700/80 p-6 sm:p-8 transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-cyan-950/20 group"
+            className="group flex flex-col overflow-hidden rounded-3xl bg-slate-900/70 border border-slate-800 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-900 hover:shadow-xl hover:shadow-cyan-950/20"
           >
-            <div>
-              <div className="flex items-center justify-between mb-5">
-                <div className="w-12 h-12 rounded-xl bg-slate-800 flex items-center justify-center text-cyan-400 group-hover:bg-cyan-500/10 transition-colors">
-                  <FolderGit2 className="w-6 h-6" />
-                </div>
-                <div className="flex items-center gap-3">
+            <div className="relative aspect-[16/10] overflow-hidden bg-slate-800">
+              <img
+                src={proj.image}
+                alt={`${proj.title} project preview`}
+                loading="lazy"
+                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/45 via-transparent to-slate-950/10" />
+              <div className="absolute right-4 top-4 flex items-center gap-2">
                   <a
                     href={proj.githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-slate-400 hover:text-white p-1 transition-colors"
+                    className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-slate-950/70 text-white shadow-sm backdrop-blur transition-colors hover:bg-slate-950"
                     aria-label="GitHub Repository"
                   >
-                    <GithubIcon className="w-5 h-5" />
+                    <GithubIcon className="w-4 h-4" />
                   </a>
                   <a
                     href={proj.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-slate-400 hover:text-cyan-400 p-1 transition-colors"
+                    className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-slate-950/70 text-white shadow-sm backdrop-blur transition-colors hover:bg-slate-950 hover:text-cyan-300"
                     aria-label="Live Demo"
                   >
-                    <ExternalLink className="w-5 h-5" />
+                    <ExternalLink className="w-4 h-4" />
                   </a>
-                </div>
               </div>
-
-              <h2 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors mb-3">
-                {proj.title}
-              </h2>
-              <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
-                {proj.description}
-              </p>
             </div>
 
-            <div>
-              <div className="flex flex-wrap gap-2 pt-4 border-t border-slate-800/60 mb-6">
+            <div className="flex flex-1 flex-col p-6 sm:p-7">
+              <div className="flex-1">
+                <h2 className="text-xl font-bold text-white transition-colors group-hover:text-cyan-300 mb-3">
+                  {proj.title}
+                </h2>
+                <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
+                  {proj.description}
+                </p>
+              </div>
+
+              <div className="flex flex-wrap gap-2 pt-4 border-t border-slate-800/80 mb-6">
                 {proj.tags.map((tag, idx) => (
                   <span
                     key={idx}
-                    className="text-xs font-medium px-2.5 py-1 rounded-md bg-slate-900/80 text-cyan-300/90 border border-slate-800"
+                    className="text-xs font-medium px-3 py-1.5 rounded-full bg-slate-800 text-cyan-200/90 border border-slate-700"
                   >
                     {tag}
                   </span>
                 ))}
               </div>
 
-              <div className="flex items-center gap-3">
+              <div className="flex items-center justify-between gap-3">
                 <a
                   href={proj.liveUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition-colors"
+                  className="inline-flex items-center gap-2 rounded-xl bg-cyan-500 px-4 py-2.5 text-xs sm:text-sm font-semibold text-slate-950 transition-colors hover:bg-cyan-400"
                 >
                   <span>Live Preview</span>
-                  <ExternalLink className="w-3.5 h-3.5" />
+                  <ExternalLink className="w-4 h-4" />
                 </a>
-                <span className="text-slate-600">•</span>
                 <a
                   href={proj.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-medium text-slate-400 hover:text-slate-200 transition-colors"
+                  className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-medium text-slate-400 transition-colors hover:text-white"
                 >
                   <span>Source Code</span>
                 </a>
